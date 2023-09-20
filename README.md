@@ -1,36 +1,86 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# discord-bot-dashboard-nextjs
+#### discord bot dashboard i made in nextjs cus I was bored. feel free to use it for your own discord bot!
 
-## Getting Started
-
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun run dev
+## .env example
+```
+CLIENT_NAME="Yippy Bot"
+CLIENT_DESC="The Best Bot!"
+ICON="https://cdn.discord.com/app-icons/......"
+CLIENT_ID="1234567890987"
+CLIENT_SECRET="vtW-29328djfklsjdfk"
+REDIRECT_URI="http(s)://domain.com/api/callback" - MAKE SURE TO SET THIS IN YOUR APPLICATION TOO OR AUTH WILL NOT WORK!!!!!!
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## How do I change the font family?
+#### (file: src/app/layout.tsx)
+```ts
+import "./globals.css";
+import type { Metadata } from "next";
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+/////////// FONT FAMILY //////////////////
+import { Poppins } from "next/font/google";
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["300", "400", "500"],
+});
+/////////// FONT FAMILY //////////////////
 
-## Learn More
+export const metadata: Metadata = {
+  title: process.env.CLIENT_NAME,
+  description: process.env.CLIENT_DESC,
+}
 
-To learn more about Next.js, take a look at the following resources:
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode
+}) {
+  return (
+    <html lang="en">
+      <body className={`bg-[#0f0f0f] ${poppins.className}`}> // font family class name
+        {children}
+      </body>
+    </html>
+  )
+}
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## How does the dashboard oauth2 api work?
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+#### (file: src/app/api/callback/route.ts - line 5)
+```ts
+async function exchangeToken(code: string) {
+    const data = {
+        client_id: `${process.env.CLIENT_ID}`,
+        client_secret: `${process.env.CLIENT_SECRET}`,
+        grant_type: "authorization_code",
+        code: code,
+        redirect_uri: `${process.env.REDIRECT_URI}`,
+    }
+    const headers = {
+        "Content-Type": "application/x-www-form-urlencoded",
+    }
+    
+    const response = await fetch("https://discord.com/api/oauth2/token", { headers, method: "POST", body: new URLSearchParams(data) });
+    if (response.ok) {
+        return await response.json();
+    }
+}
+```
+This gets the access token to get the users information from discords api
 
-## Deploy on Vercel
+#### (file: src/app/api/callback/route.ts - line 23)
+```ts
+async function getUser(access_token: string) {
+    const headers = {
+        "Authorization": `Bearer ${access_token}`,
+    }
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+    const response = await fetch("https://discord.com/api/oauth2/@me", { headers, method: "GET" });
+    if (response.ok) {
+        return await response.json();
+    }
+}
+```
+This gets the users information

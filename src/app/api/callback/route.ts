@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { redirect } from "next/navigation";
+import { cookies } from "next/headers";
 
 async function exchangeToken(code: string) {
     const data = {
@@ -41,7 +42,9 @@ export async function GET(req: NextRequest, res: NextResponse) {
     const { access_token, refresh_token } = await exchangeToken(code);
     const { user } = await getUser(access_token);
 
-    console.log(user);
+    const cookieStore = cookies();
+    cookieStore.set("token", access_token);
+    //console.log(user);
 
-    return redirect("/");
+    return redirect("/dashboard");
 }
