@@ -8,13 +8,13 @@ export default function Navbar() {
                 <div>
                     <Link href="/" className="flex items-center">
                         <Image
-                        src="https://cdn.discordapp.com/app-icons/1089798390398853232/d7069e17c7b2bd01ce580444ff1db5f7.png?size=300"
+                        src={`${process.env.ICON}`}
                         height={35}
                         width={35}
-                        alt="BotLogo"
+                        alt={`${process.env.CLIENT_NAME}`}
                         className="rounded-full shadow-lg mr-2"
                         />
-                        <span className="text-white">PepeBOT</span>
+                        <span className="text-white">{process.env.CLIENT_NAME}</span>
                     </Link>
                 </div>
                 <div className="flex gap-8">

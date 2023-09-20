@@ -8,8 +8,8 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "PepeBOT",
-  description: "The Best Bot For Your Discord Server!",
+  title: process.env.CLIENT_NAME,
+  description: process.env.CLIENT_DESC,
 }
 
 export default function RootLayout({
