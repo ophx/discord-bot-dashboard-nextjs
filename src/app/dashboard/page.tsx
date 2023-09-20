@@ -16,7 +16,7 @@ export default function Home() {
     return (
         <>
             {/* Navbar */}
-                <Navbar />
+            <Navbar />
 
             { /* Main */ }
                 <main className="container mx-auto px-64">
