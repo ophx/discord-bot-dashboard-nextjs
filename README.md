@@ -11,42 +11,7 @@ CLIENT_SECRET="vtW-29328djfklsjdfk"
 REDIRECT_URI="http(s)://domain.com/api/callback" - MAKE SURE TO SET THIS IN YOUR APPLICATION TOO OR AUTH WILL NOT WORK!!!!!!
 ```
 
-## How do I change the font family?
-#### (file: src/app/layout.tsx)
-```ts
-import "./globals.css";
-import type { Metadata } from "next";
-
-/////////// FONT FAMILY //////////////////
-import { Poppins } from "next/font/google";
-
-const poppins = Poppins({
-  subsets: ["latin"],
-  weight: ["300", "400", "500"],
-});
-/////////// FONT FAMILY //////////////////
-
-export const metadata: Metadata = {
-  title: process.env.CLIENT_NAME,
-  description: process.env.CLIENT_DESC,
-}
-
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
-  return (
-    <html lang="en">
-      <body className={`bg-[#0f0f0f] ${poppins.className}`}> // font family class name
-        {children}
-      </body>
-    </html>
-  )
-}
-```
-
-## How does the dashboard oauth2 api work?
+## Dashboard oauth2 api?
 
 #### (file: src/app/api/callback/route.ts - line 5)
 ```ts
