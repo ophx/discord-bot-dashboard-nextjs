@@ -44,7 +44,7 @@ export async function GET(req: NextRequest, res: NextResponse) {
 
     const cookieStore = cookies();
     cookieStore.set("token", access_token);
-    //console.log(user);
+    console.log(user);
 
     return redirect("/dashboard");
 }
