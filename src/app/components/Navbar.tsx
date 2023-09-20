@@ -18,9 +18,6 @@ export default function Navbar() {
                     </Link>
                 </div>
                 <div className="flex gap-8">
-                    <Link href="/" className="transition-all duration-150 font-medium text-gray-400 hover:text-white">
-                        Commands
-                    </Link>
                     <Link href="/team" className="transition-all duration-150 font-medium text-gray-400 hover:text-white">
                         Our Team
                     </Link>
