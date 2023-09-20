@@ -26,7 +26,7 @@ export default function Navbar() {
                     </Link>
                 </div>
                 <div>
-                    <Link href="/" className="transition-all duration-150 px-4 py-2 rounded shadow-lg bg-blue-600 hover:bg-blue-700 text-white text-sm">
+                    <Link href="/api/login" className="transition-all duration-150 px-4 py-2 rounded shadow-lg bg-blue-600 hover:bg-blue-700 text-white text-sm">
                         Login With Discord
                     </Link>
                 </div>

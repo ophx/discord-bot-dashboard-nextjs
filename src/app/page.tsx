@@ -19,10 +19,10 @@ export default function Home() {
                 <p className="text-white text-5xl">PepeBOT</p>
                 <p className="text-gray-400 text-xl">The Best Bot For Your Discord Server!</p>
                 <div className="flex gap-4 mt-2">
-                  <Link href="/" className="transition-all duration-150 px-4 py-2 rounded shadow-lg bg-blue-600 hover:bg-blue-700 text-white">
-                    Support Server
+                  <Link href="/api/login" className="transition-all duration-150 px-4 py-2 rounded shadow-lg bg-blue-600 hover:bg-blue-700 text-white">
+                    Get Started!
                   </Link>
-                  <Link href="/" className="transition-all duration-150 px-4 py-2 rounded shadow-lg bg-[#2f2f2f] hover:bg-[#3f3f3f] text-white">
+                  <Link href="/api/invite" target="_blank" className="transition-all duration-150 px-4 py-2 rounded shadow-lg bg-[#2f2f2f] hover:bg-[#3f3f3f] text-white">
                     Invite PepeBOT
                   </Link>
                 </div>
