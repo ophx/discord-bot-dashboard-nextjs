@@ -11,7 +11,7 @@ CLIENT_SECRET="vtW-29328djfklsjdfk"
 REDIRECT_URI="http(s)://domain.com/api/callback" - MAKE SURE TO SET THIS IN YOUR APPLICATION TOO OR AUTH WILL NOT WORK!!!!!!
 ```
 
-## Dashboard oauth2 api?
+## Dashboard oauth2 api
 
 #### (file: src/app/api/callback/route.ts - line 5)
 ```ts
