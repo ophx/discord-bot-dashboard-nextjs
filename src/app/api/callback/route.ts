@@ -40,10 +40,11 @@ export async function GET(req: NextRequest, res: NextResponse) {
     }
 
     const { access_token, refresh_token } = await exchangeToken(code);
-    const { user } = await getUser(access_token);
 
     const cookieStore = cookies();
     cookieStore.set("token", access_token);
+
+    const { user } = await getUser(access_token);
     console.log(user);
 
     return redirect("/dashboard");
