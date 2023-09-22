@@ -10,12 +10,15 @@ export default function Loading() {
             { /* Main */ }
             <main className="container mx-auto px-64">
                 <div className="flex h-screen">
-                    <div className="m-auto w-full">
-                        <div className="flex flex-col items-center justify-center">
-                            <div className="rounded-full shadow-lg bg-[#1f1f1f] animate-pulse mx-auto mb-4 h-[200px] w-[200px]"></div>
+                    <div className="flex items-center">
+                        <div>
+                            <div className="rounded-full shadow-lg bg-[#1f1f1f] animate-pulse mx-auto mr-4 h-[150px] w-[150px]"></div>
+                        </div>
+                        <div>
                             <div className="flex h-4 w-96 rounded shadow-lg bg-[#1f1f1f] animate-pulse"></div>
                         </div>
                     </div>
+                    <div className="border-b border-[#1f1f1f] mt-4 mb-4"></div>
                 </div>
             </main>
 
