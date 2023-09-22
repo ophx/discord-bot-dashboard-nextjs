@@ -54,7 +54,6 @@ export default async function Home() {
                             <div className="bg-[#1f1f1f] rounded shadow-lg p-4">
                                 <div className="grid grid-cols-4 gap-4">
                                     {mutualGuilds.map((guild: any) => (
-                                        guild.permissions === 2147483647 &&
                                         <div key={guild.id} className="transition-all duration-150 text-center hover:bg-[#2f2f2f] hover:rounded hover:shadow-lg py-2">
                                             <Link href={`/dashboard/${guild.id}`}>
                                                 <Image
