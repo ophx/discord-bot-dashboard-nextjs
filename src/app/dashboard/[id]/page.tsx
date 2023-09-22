@@ -37,6 +37,13 @@ export default async function Home({ params }: { params: { id: string } }) {
                     <div className="flex h-screen">
                         <div className="m-auto w-full">
                             <div>
+                                <Image
+                                    src={`https://cdn.discordapp.com/icons/${guild.id}/${guild.icon}.png?size=300`}
+                                    height={200}
+                                    width={200}
+                                    alt={guild.name}
+                                    className="rounded-full shadow-lg mx-auto mb-4"
+                                />
                                 <p className="text-white text-5xl text-center mb-4">{guild.name}</p>
                             </div>
                         </div>
