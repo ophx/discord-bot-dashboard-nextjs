@@ -20,6 +20,7 @@ async function fetchGuilds(access_token: string) {
 export default async function Home() {
     const cookieStore = cookies();
     const token = String(cookieStore.get("token")?.value);
+    
     if (!token) {
         redirect("/");
     }
@@ -42,7 +43,7 @@ export default async function Home() {
                                         {guilds.map((guild: any) => (
                                             guild.permissions === 2147483647 &&
                                             <div key={guild.id} className="transition-all duration-150 text-center hover:bg-[#2f2f2f] hover:rounded hover:shadow-lg py-2">
-                                                <Link href="/dashboard/:id">
+                                                <Link href={`/dashboard/${guild.id}`}>
                                                     <Image
                                                         src={`https://cdn.discordapp.com/icons/${guild.id}/${guild.icon}.png?size=300`}
                                                         height={100}
