@@ -20,6 +20,19 @@ export default async function Navbar() {
     let user;
     if (token) {
         user = await getUser(token);
+        // {
+        //     id: '459738097622712320',
+        //     username: 'ophx',
+        //     avatar: 'a3094d93bbc01dd74140e768abc59203',
+        //     discriminator: '0',
+        //     public_flags: 4194368,
+        //     flags: 4194368,
+        //     banner: null,
+        //     accent_color: null,
+        //     global_name: null,
+        //     avatar_decoration_data: null,
+        //     banner_color: null
+        // }
     }
 
     return (
@@ -44,24 +57,24 @@ export default async function Navbar() {
                 </div>
                 <div>
                     {
-                        token
+                        user
                         ?
                         <div>
                             <div className="select-none cursor-pointer flex items-center">
                                 <div>
                                     <Image
-                                        src={`https://cdn.discordapp.com/avatars/${user.user.id}/${user.user.avatar}.png?size=4096`}
+                                        src={`https://cdn.discordapp.com/avatars/${user?.user?.id}/${user?.user?.avatar}.png?size=4096`}
                                         height={35}
                                         width={35}
-                                        alt={user.user.username}
+                                        alt={user?.user?.username}
                                         className="rounded-full shadow-lg mr-2"
                                     />
                                 </div>
                                 <div className="flex items-center">
-                                    <span className="text-white">{user.user.username}</span>
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5 text-white">
-                                            <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
-                                        </svg>
+                                    <span className="text-white">{user?.user?.username}</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5 text-white">
+                                        <path fillRule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clipRule="evenodd" />
+                                    </svg>
                                 </div>
                             </div>
                             <div id="dropdown" className="fixed right-1 mt-2 z-10 rounded shadow-lg px-2 py-2 bg-[#2f2f2f]">
