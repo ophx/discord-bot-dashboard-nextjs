@@ -17,6 +17,17 @@ async function fetchGuilds(access_token: string) {
     }
 }
 
+async function fetchBotGuilds() {
+    const headers = {
+        "Authorization": `Bot ${process.env.CLIENT_TOKEN}`,
+    }
+
+    const response = await fetch("https://discord.com/api/users/@me/guilds", { headers, method: "GET" });
+    if (response.ok) {
+        return await response.json();
+    }
+}
+
 export default async function Home() {
     const cookieStore = cookies();
     const token = String(cookieStore.get("token")?.value);
@@ -26,6 +37,8 @@ export default async function Home() {
     }
 
     const guilds = await fetchGuilds(token);
+    const botGuilds = await fetchBotGuilds();
+    const mutualGuilds = guilds.filter((guild: any) => botGuilds.some((botGuild: any) => botGuild.id === guild.id));
 
     return (
         <>
@@ -40,7 +53,7 @@ export default async function Home() {
                                 <p className="text-white text-5xl text-center mb-4">Select A Server</p>
                                 <div className="bg-[#1f1f1f] rounded shadow-lg p-4">
                                     <div className="grid grid-cols-4 gap-4">
-                                        {guilds.map((guild: any) => (
+                                        {mutualGuilds.map((guild: any) => (
                                             guild.permissions === 2147483647 &&
                                             <div key={guild.id} className="transition-all duration-150 text-center hover:bg-[#2f2f2f] hover:rounded hover:shadow-lg py-2">
                                                 <Link href={`/dashboard/${guild.id}`}>

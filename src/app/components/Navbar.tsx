@@ -20,19 +20,6 @@ export default async function Navbar() {
     let user;
     if (token) {
         user = await getUser(token);
-        // {
-        //     id: '459738097622712320',
-        //     username: 'ophx',
-        //     avatar: 'a3094d93bbc01dd74140e768abc59203',
-        //     discriminator: '0',
-        //     public_flags: 4194368,
-        //     flags: 4194368,
-        //     banner: null,
-        //     accent_color: null,
-        //     global_name: null,
-        //     avatar_decoration_data: null,
-        //     banner_color: null
-        // }
     }
 
     return (
@@ -77,7 +64,7 @@ export default async function Navbar() {
                                     </svg>
                                 </div>
                             </div>
-                            <div id="dropdown" className="fixed right-1 mt-2 z-10 rounded shadow-lg px-2 py-2 bg-[#2f2f2f]">
+                            <div id="dropdown" className="fixed right-1 w-48 mt-2 z-10 rounded shadow-lg px-2 py-2 bg-[#2f2f2f]">
                                 <Link href="/dashboard" className="transition-all duration-150 font-medium text-gray-400 hover:text-white px-4 py-2 flex w-full rounded hover:shadow-lg hover:bg-[#3f3f3f]">
                                     Select A Server
                                 </Link>

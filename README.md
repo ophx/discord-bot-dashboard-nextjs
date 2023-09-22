@@ -8,6 +8,7 @@ CLIENT_DESC="The Best Bot!"
 ICON="https://cdn.discord.com/app-icons/......"
 CLIENT_ID="1234567890987"
 CLIENT_SECRET="vtW-29328djfklsjdfk"
+CLIENT_TOKEN="MTYA-........"
 REDIRECT_URI="http(s)://domain.com/api/callback" - MAKE SURE TO SET THIS IN YOUR APPLICATION TOO OR AUTH WILL NOT WORK!!!!!!
 ```
 
