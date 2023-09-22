@@ -47,7 +47,7 @@ export default async function Navbar() {
                         token
                         ?
                         <div>
-                            <div className="cursor-pointer flex items-center">
+                            <div className="select-none cursor-pointer flex items-center">
                                 <div>
                                     <Image
                                         src={`https://cdn.discordapp.com/avatars/${user.user.id}/${user.user.avatar}.png?size=4096`}
