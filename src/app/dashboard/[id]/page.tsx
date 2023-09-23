@@ -26,7 +26,6 @@ export default async function Home({ params }: { params: { id: string } }) {
     }
 
     const guild = await fetchGuildInfo(params.id);
-    console.log(guild);
 
     return (
         <>
