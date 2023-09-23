@@ -11,7 +11,7 @@ async function fetchGuildInfo(id: string) {
         "Authorization": `Bot ${process.env.CLIENT_TOKEN}`,
     }
 
-    const response = await fetch(`https://discord.com/api/guilds/${id}`, { headers, method: "GET" });
+    const response = await fetch(`https://discord.com/api/guilds/${id}?with_counts=true`, { headers, method: "GET" });
     if (response.ok) {
         return await response.json();
     }
@@ -51,7 +51,32 @@ export default async function Home({ params }: { params: { id: string } }) {
                             </div>
                         </div>
                         <div className="border-b border-[#1f1f1f] mt-4 mb-4"></div>
-                        <div className="space-y-4">
+                        <div className="space-y-10">
+                            <div>
+                                <p className="text-white text-2xl mb-2">Server Stats</p>
+                                <div className="grid grid-cols-5 gap-4">
+                                    <div>
+                                        <p className="text-white text-xl text-center">Custom Invite</p>
+                                        <p className="text-gray-400 text-center">{guild.vanilty_url_code ? `discord.gg/${guild.vanilty_url_code}` : "None"}</p>
+                                    </div>
+                                    <div>
+                                        <p className="text-white text-xl text-center">Region</p>
+                                        <p className="text-gray-400 text-center">{guild.preferred_locale}</p>
+                                    </div>
+                                    <div>
+                                        <p className="text-white text-xl text-center">Members</p>
+                                        <p className="text-gray-400 text-center">{guild.approximate_member_count}</p>
+                                    </div>
+                                    <div>
+                                        <p className="text-white text-xl text-center">Roles</p>
+                                        <p className="text-gray-400 text-center">{guild.roles.length}</p>
+                                    </div>
+                                    <div>
+                                        <p className="text-white text-xl text-center">Stickers</p>
+                                        <p className="text-gray-400 text-center">{guild.stickers.length}</p>
+                                    </div>
+                                </div>
+                            </div>
                             <div>
                                 <p className="text-white text-2xl mb-2">Modules</p>
                                 <div className="grid grid-cols-3 gap-4">

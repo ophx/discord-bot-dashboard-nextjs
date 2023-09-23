@@ -49,6 +49,9 @@ export default function UserDropdown({ user }: { user: any }) {
                     <Link href="/dashboard" className="transition-all duration-150 font-medium text-gray-400 hover:text-white px-4 py-2 flex w-full rounded hover:shadow-lg hover:bg-[#3f3f3f]">
                         Select A Server
                     </Link>
+                    <Link href="/dashboard/me" className="transition-all duration-150 font-medium text-gray-400 hover:text-white px-4 py-2 flex w-full rounded hover:shadow-lg hover:bg-[#3f3f3f]">
+                        View Your Profile
+                    </Link>
                     <Link href="/api/logout" className="transition-all duration-150 font-medium text-red-600 hover:text-red-600 px-4 py-2 flex w-full rounded hover:shadow-lg hover:bg-[#3f3f3f]">
                         Logout
                     </Link>
