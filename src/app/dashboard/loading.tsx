@@ -18,42 +18,34 @@ export default function Loading() {
                                     <div className="text-center py-2 flex flex-col items-center">
                                         <div className="rounded-full shadow-lg bg-[#3f3f3f] animate-pulse mx-auto mb-2 h-[100px] w-[100px]"></div>
                                         <div className="flex h-2.5 w-full rounded shadow-lg bg-[#3f3f3f] animate-pulse mb-2"></div>
-                                        <div className="flex h-2.5 w-32 rounded shadow-lg bg-[#3f3f3f] animate-pulse"></div>
                                     </div>
                                     <div className="text-center py-2 flex flex-col items-center">
                                         <div className="rounded-full shadow-lg bg-[#3f3f3f] animate-pulse mx-auto mb-2 h-[100px] w-[100px]"></div>
                                         <div className="flex h-2.5 w-full rounded shadow-lg bg-[#3f3f3f] animate-pulse mb-2"></div>
-                                        <div className="flex h-2.5 w-32 rounded shadow-lg bg-[#3f3f3f] animate-pulse"></div>
                                     </div>
                                     <div className="text-center py-2 flex flex-col items-center">
                                         <div className="rounded-full shadow-lg bg-[#3f3f3f] animate-pulse mx-auto mb-2 h-[100px] w-[100px]"></div>
                                         <div className="flex h-2.5 w-full rounded shadow-lg bg-[#3f3f3f] animate-pulse mb-2"></div>
-                                        <div className="flex h-2.5 w-32 rounded shadow-lg bg-[#3f3f3f] animate-pulse"></div>
                                     </div>
                                     <div className="text-center py-2 flex flex-col items-center">
                                         <div className="rounded-full shadow-lg bg-[#3f3f3f] animate-pulse mx-auto mb-2 h-[100px] w-[100px]"></div>
                                         <div className="flex h-2.5 w-full rounded shadow-lg bg-[#3f3f3f] animate-pulse mb-2"></div>
-                                        <div className="flex h-2.5 w-32 rounded shadow-lg bg-[#3f3f3f] animate-pulse"></div>
                                     </div>
                                     <div className="text-center py-2 flex flex-col items-center">
                                         <div className="rounded-full shadow-lg bg-[#3f3f3f] animate-pulse mx-auto mb-2 h-[100px] w-[100px]"></div>
                                         <div className="flex h-2.5 w-full rounded shadow-lg bg-[#3f3f3f] animate-pulse mb-2"></div>
-                                        <div className="flex h-2.5 w-32 rounded shadow-lg bg-[#3f3f3f] animate-pulse"></div>
                                     </div>
                                     <div className="text-center py-2 flex flex-col items-center">
                                         <div className="rounded-full shadow-lg bg-[#3f3f3f] animate-pulse mx-auto mb-2 h-[100px] w-[100px]"></div>
                                         <div className="flex h-2.5 w-full rounded shadow-lg bg-[#3f3f3f] animate-pulse mb-2"></div>
-                                        <div className="flex h-2.5 w-32 rounded shadow-lg bg-[#3f3f3f] animate-pulse"></div>
                                     </div>
                                     <div className="text-center py-2 flex flex-col items-center">
                                         <div className="rounded-full shadow-lg bg-[#3f3f3f] animate-pulse mx-auto mb-2 h-[100px] w-[100px]"></div>
                                         <div className="flex h-2.5 w-full rounded shadow-lg bg-[#3f3f3f] animate-pulse mb-2"></div>
-                                        <div className="flex h-2.5 w-32 rounded shadow-lg bg-[#3f3f3f] animate-pulse"></div>
                                     </div>
                                     <div className="text-center py-2 flex flex-col items-center">
                                         <div className="rounded-full shadow-lg bg-[#3f3f3f] animate-pulse mx-auto mb-2 h-[100px] w-[100px]"></div>
                                         <div className="flex h-2.5 w-full rounded shadow-lg bg-[#3f3f3f] animate-pulse mb-2"></div>
-                                        <div className="flex h-2.5 w-32 rounded shadow-lg bg-[#3f3f3f] animate-pulse"></div>
                                     </div>
                                 </div>
                             </div>

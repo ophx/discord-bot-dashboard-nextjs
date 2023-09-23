@@ -15,6 +15,7 @@ export default function Loading() {
                             <div className="rounded-full shadow-lg bg-[#1f1f1f] animate-pulse mx-auto mr-4 h-[150px] w-[150px]"></div>
                         </div>
                         <div>
+                            <div className="flex h-4 w-96 rounded shadow-lg bg-[#1f1f1f] animate-pulse mb-2"></div>
                             <div className="flex h-4 w-96 rounded shadow-lg bg-[#1f1f1f] animate-pulse"></div>
                         </div>
                     </div>

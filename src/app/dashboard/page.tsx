@@ -64,7 +64,6 @@ export default async function Home() {
                                                     className="rounded-full shadow-lg mx-auto mb-2"
                                                 />
                                                 <p className="text-white text-xl truncate">{guild.name}</p>
-                                                <p className="text-gray-400 truncate">0 Members</p>
                                             </Link>
                                         </div>
                                     ))}

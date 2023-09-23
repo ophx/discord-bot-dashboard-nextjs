@@ -47,7 +47,8 @@ export default async function Home({ params }: { params: { id: string } }) {
                                 />
                             </div>
                             <div>
-                                <p className="text-white text-5xl mb-4">{guild.name}</p>
+                                <p className="text-white text-5xl">{guild.name}</p>
+                                <p className="text-gray-400 text-2xl mb-4">Owner ID: {guild.owner_id}</p>
                             </div>
                         </div>
                         <div className="border-b border-[#1f1f1f] mt-4 mb-4"></div>
@@ -74,6 +75,15 @@ export default async function Home({ params }: { params: { id: string } }) {
                                     <div>
                                         <p className="text-white text-xl text-center">Stickers</p>
                                         <p className="text-gray-400 text-center">{guild.stickers.length}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <p className="text-white text-2xl mb-2">{process.env.CLIENT_NAME} Settings</p>
+                                <div className="grid grid-cols-3 gap-4">
+                                    <div>
+                                        <p className="text-gray-400 text-sm uppercase font-medium">Lorem ipsum</p>
+                                        <input type="text" className="px-4 py-2 rounded shadow-lg border-none outline-none placeholder-gray-400 text-white bg-[#1f1f1f]" />
                                     </div>
                                 </div>
                             </div>
