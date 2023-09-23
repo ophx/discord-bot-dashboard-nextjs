@@ -26,6 +26,7 @@ export default async function Home({ params }: { params: { id: string } }) {
     }
 
     const guild = await fetchGuildInfo(params.id);
+    console.log(guild);
 
     return (
         <>
@@ -54,19 +55,19 @@ export default async function Home({ params }: { params: { id: string } }) {
                         <div className="border-b border-[#1f1f1f] mt-4 mb-4"></div>
                         <div className="space-y-10">
                             <div>
-                                <p className="text-white text-2xl mb-2">Server Stats</p>
+                                <p className="text-white text-2xl mb-2">Stats</p>
                                 <div className="grid grid-cols-5 gap-4">
                                     <div>
                                         <p className="text-white text-xl text-center">Custom Invite</p>
                                         <p className="text-gray-400 text-center">{guild.vanilty_url_code ? `discord.gg/${guild.vanilty_url_code}` : "None"}</p>
                                     </div>
                                     <div>
-                                        <p className="text-white text-xl text-center">Region</p>
-                                        <p className="text-gray-400 text-center">{guild.preferred_locale}</p>
-                                    </div>
-                                    <div>
                                         <p className="text-white text-xl text-center">Members</p>
                                         <p className="text-gray-400 text-center">{guild.approximate_member_count}</p>
+                                    </div>
+                                    <div>
+                                        <p className="text-white text-xl text-center">Members Online</p>
+                                        <p className="text-gray-400 text-center">{guild.approximate_presence_count}</p>
                                     </div>
                                     <div>
                                         <p className="text-white text-xl text-center">Roles</p>
@@ -75,15 +76,6 @@ export default async function Home({ params }: { params: { id: string } }) {
                                     <div>
                                         <p className="text-white text-xl text-center">Stickers</p>
                                         <p className="text-gray-400 text-center">{guild.stickers.length}</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div>
-                                <p className="text-white text-2xl mb-2">{process.env.CLIENT_NAME} Settings</p>
-                                <div className="grid grid-cols-3 gap-4">
-                                    <div>
-                                        <p className="text-gray-400 text-sm uppercase font-medium">Lorem ipsum</p>
-                                        <input type="text" className="px-4 py-2 rounded shadow-lg border-none outline-none placeholder-gray-400 text-white bg-[#1f1f1f]" />
                                     </div>
                                 </div>
                             </div>
