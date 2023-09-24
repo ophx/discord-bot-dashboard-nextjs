@@ -71,7 +71,7 @@ export default async function Home({ params }: { params: { id: string } }) {
                             <div>
                                 <p className="text-white text-2xl mb-2">Modules</p>
                                 <div className="grid grid-cols-3 gap-4">
-                                    <div className="transition-all duration-150 bg-[#1f1f1f] hover:bg-[#2f2f2f] rounded shadow-lg p-4 cursor-pointer flex justify-between items-center">
+                                    <Link href="#" className="transition-all duration-150 bg-[#1f1f1f] hover:bg-[#2f2f2f] rounded shadow-lg p-4 cursor-pointer flex justify-between items-center">
                                         <div>
                                             <p className="text-white text-xl">Welcome</p>
                                             <p className="text-gray-400">Edit Your Servers Welcome Channel & Message!</p>
@@ -81,7 +81,7 @@ export default async function Home({ params }: { params: { id: string } }) {
                                                 <path fillRule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clipRule="evenodd" />
                                             </svg>
                                         </div>
-                                    </div>
+                                    </Link>
                                 </div>
                             </div>
                         </div>
