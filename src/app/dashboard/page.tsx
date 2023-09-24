@@ -2,31 +2,10 @@ import Image from "next/image";
 import Link from "next/link";
 import { redirect } from "next/navigation";
 import { cookies } from "next/headers";
+import { fetchGuilds, fetchBotGuilds } from "../utils/guild";
 
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-
-async function fetchGuilds(access_token: string) {
-    const headers = {
-        "Authorization": `Bearer ${access_token}`,
-    }
-
-    const response = await fetch("https://discord.com/api/users/@me/guilds", { headers, method: "GET" });
-    if (response.ok) {
-        return await response.json();
-    }
-}
-
-async function fetchBotGuilds() {
-    const headers = {
-        "Authorization": `Bot ${process.env.CLIENT_TOKEN}`,
-    }
-
-    const response = await fetch("https://discord.com/api/users/@me/guilds", { headers, method: "GET" });
-    if (response.ok) {
-        return await response.json();
-    }
-}
 
 export default async function Home() {
     const cookieStore = cookies();

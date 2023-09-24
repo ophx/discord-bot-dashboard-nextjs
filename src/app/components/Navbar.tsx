@@ -1,19 +1,9 @@
 import Link from "next/link";
 import Image from "next/image";
 import { cookies } from "next/headers";
+import { getUser } from "../utils/user";
 
 import UserDropdown from "./UserDropdown";
-
-async function getUser(access_token: string) {
-    const headers = {
-        "Authorization": `Bearer ${access_token}`,
-    }
-
-    const response = await fetch("https://discord.com/api/oauth2/@me", { headers, method: "GET" });
-    if (response.ok) {
-        return await response.json();
-    }
-}
 
 export default async function Navbar() {
     const cookieStore = cookies();

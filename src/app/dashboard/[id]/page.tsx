@@ -2,20 +2,10 @@ import Image from "next/image";
 import Link from "next/link";
 import { redirect } from "next/navigation";
 import { cookies } from "next/headers";
+import { fetchGuildInfo } from "../../utils/guild";
 
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
-
-async function fetchGuildInfo(id: string) {
-    const headers = {
-        "Authorization": `Bot ${process.env.CLIENT_TOKEN}`,
-    }
-
-    const response = await fetch(`https://discord.com/api/guilds/${id}?with_counts=true`, { headers, method: "GET" });
-    if (response.ok) {
-        return await response.json();
-    }
-}
 
 export default async function Home({ params }: { params: { id: string } }) {
     const cookieStore = cookies();
