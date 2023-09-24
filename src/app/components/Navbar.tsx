@@ -40,8 +40,11 @@ export default async function Navbar() {
                     </Link>
                 </div>
                 <div className="flex gap-8">
-                    <Link href="/team" className="transition-all duration-150 font-medium text-gray-400 hover:text-white">
-                        Our Team
+                    <Link href="/" className="transition-all duration-150 font-medium text-gray-400 hover:text-white">
+                        Stats
+                    </Link>
+                    <Link href="/" className="transition-all duration-150 font-medium text-gray-400 hover:text-white">
+                        Features
                     </Link>
                 </div>
                 <div>
@@ -54,7 +57,7 @@ export default async function Navbar() {
                         :
                         (
                             <Link href="/api/login" className="transition-all duration-150 px-4 py-2 rounded shadow-lg bg-blue-600 hover:bg-blue-700 text-white text-sm">
-                                Login With Discord
+                                Login
                             </Link>
                         )
                     }

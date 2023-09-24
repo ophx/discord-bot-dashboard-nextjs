@@ -4,7 +4,7 @@ import Link from "next/link";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
-export default function Home() {
+export default async function Home() {
   return (
     <>
       {/* Navbar */}
@@ -33,13 +33,25 @@ export default function Home() {
                   height={250}
                   width={250}
                   alt={`${process.env.CLIENT_NAME}`}
-                  className="rounded-full shadow-lg floating"
+                  className="rounded-full shadow-lg"
                 />
               </div>
+            </div>
+            <div className="mt-4 floating text-gray-400 flex justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-7 h-7">
+                <path fillRule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clipRule="evenodd" />
+              </svg>
             </div>
           </div>
         </div>
       </main>
+
+      <div className="space-y-60 mb-96">
+        {/* Features */}
+        <main className="text-center container mx-auto px-64">
+          <p className="text-white text-2xl mb-2">Features</p>
+        </main>
+      </div>
 
       {/* Footer */}
       <Footer />
