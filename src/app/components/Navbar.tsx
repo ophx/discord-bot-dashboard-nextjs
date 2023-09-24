@@ -40,10 +40,7 @@ export default async function Navbar() {
                     </Link>
                 </div>
                 <div className="flex gap-8">
-                    <Link href="/" className="transition-all duration-150 font-medium text-gray-400 hover:text-white">
-                        Stats
-                    </Link>
-                    <Link href="/" className="transition-all duration-150 font-medium text-gray-400 hover:text-white">
+                    <Link href="/#features" className="transition-all duration-150 font-medium text-gray-400 hover:text-white">
                         Features
                     </Link>
                 </div>

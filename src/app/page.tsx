@@ -48,7 +48,7 @@ export default async function Home() {
 
       <div className="space-y-60 mb-96">
         {/* Features */}
-        <main className="text-center container mx-auto px-64">
+        <main id="features" className="text-center container mx-auto px-64">
           <p className="text-white text-2xl mb-2">Features</p>
         </main>
       </div>
