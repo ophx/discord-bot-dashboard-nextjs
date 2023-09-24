@@ -45,11 +45,7 @@ export default async function Home({ params }: { params: { id: string } }) {
                         <div className="space-y-10">
                             <div>
                                 <p className="text-white text-2xl mb-2">Stats</p>
-                                <div className="grid grid-cols-5 gap-4">
-                                    <div>
-                                        <p className="text-white text-xl text-center">Custom Invite</p>
-                                        <p className="text-gray-400 text-center">{guild.vanilty_url_code ? `discord.gg/${guild.vanilty_url_code}` : "None"}</p>
-                                    </div>
+                                <div className="grid grid-cols-2 gap-4">
                                     <div>
                                         <p className="text-white text-xl text-center">Members</p>
                                         <p className="text-gray-400 text-center">{guild.approximate_member_count}</p>
@@ -57,14 +53,6 @@ export default async function Home({ params }: { params: { id: string } }) {
                                     <div>
                                         <p className="text-white text-xl text-center">Members Online</p>
                                         <p className="text-gray-400 text-center">{guild.approximate_presence_count}</p>
-                                    </div>
-                                    <div>
-                                        <p className="text-white text-xl text-center">Roles</p>
-                                        <p className="text-gray-400 text-center">{guild.roles.length}</p>
-                                    </div>
-                                    <div>
-                                        <p className="text-white text-xl text-center">Stickers</p>
-                                        <p className="text-gray-400 text-center">{guild.stickers.length}</p>
                                     </div>
                                 </div>
                             </div>
