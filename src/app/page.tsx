@@ -9,11 +9,6 @@ import { fetchBotGuilds } from "./utils/guild";
 
 export default async function Home() {
   const botGuilds = await fetchBotGuilds();
-  
-  let trusted = [];
-  for (let i = botGuilds; i < 3; i++) {
-    console.log(i);
-  }
 
   return (
     <>
