@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import Marquee from "react-fast-marquee";
 
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
@@ -58,26 +59,28 @@ export default async function Home() {
             <p className="text-white text-2xl text-center">{process.env.CLIENT_NAME} Is Trusted And Used By More Than {botGuilds.length} Servers</p>
           </div>
           <div className="container mx-auto px-64">
-            <div className="grid grid-cols-4 gap-4 mt-4">
-              {botGuilds.map((guild: any) => (
-                <div key={guild.id} className="bg-[#2f2f2f] rounded shadow-lg p-4">
-                  <div className="flex items-center">
-                    <div>
-                      <Image
-                        src={`https://cdn.discordapp.com/icons/${guild.id}/${guild.icon}.png?size=300`}
-                        height={50}
-                        width={50}
-                        alt={guild.name}
-                        className="rounded-full shadow-lg mx-auto mr-4"
-                      />
-                    </div>
-                    <div>
-                      <p className="text-white truncate">{guild.name}</p>
+            <Marquee autoFill={true}>
+              <div className="grid grid-cols-4 gap-4 mt-4">
+                {botGuilds.map((guild: any) => (
+                  <div key={guild.id} className="bg-[#2f2f2f] rounded shadow-lg p-4">
+                    <div className="flex items-center">
+                      <div>
+                        <Image
+                          src={`https://cdn.discordapp.com/icons/${guild.id}/${guild.icon}.png?size=300`}
+                          height={50}
+                          width={50}
+                          alt={guild.name}
+                          className="rounded-full shadow-lg mx-auto mr-4"
+                        />
+                      </div>
+                      <div>
+                        <p className="text-white truncate">{guild.name}</p>
+                      </div>
                     </div>
                   </div>
-                </div>
-              ))}
-            </div>
+                ))}
+              </div>
+            </Marquee>
           </div>
         </div>
       </ScrollAnimation>
