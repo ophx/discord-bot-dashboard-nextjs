@@ -5,7 +5,6 @@ import { cookies } from "next/headers";
 import { fetchGuildInfo } from "../../utils/guild";
 
 import Navbar from "../../components/Navbar";
-import Footer from "../../components/Footer";
 
 export default async function Home({ params }: { params: { id: string } }) {
     const cookieStore = cookies();

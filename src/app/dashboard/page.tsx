@@ -5,7 +5,6 @@ import { cookies } from "next/headers";
 import { fetchGuilds, fetchBotGuilds } from "../utils/guild";
 
 import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
 
 export default async function Home() {
     const cookieStore = cookies();
