@@ -22,9 +22,6 @@ export default function Loading() {
                     <div className="border-b border-[#1f1f1f] mt-4 mb-4"></div>
                 </div>
             </main>
-
-            {/* Footer */}
-            <Footer />
         </>
     )
 }

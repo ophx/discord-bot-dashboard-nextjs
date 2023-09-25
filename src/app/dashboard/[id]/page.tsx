@@ -76,9 +76,6 @@ export default async function Home({ params }: { params: { id: string } }) {
                     </div>
                 </div>
             </main>
-
-            {/* Footer */}
-            <Footer />
         </>
     )
 }
