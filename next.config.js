@@ -22,9 +22,9 @@ const nextConfig = {
             },
             {
                 protocol: "https",
-                hostname: "avatars.githubusercontent.com",
+                hostname: "cdn.discordapp.com",
                 port: "",
-                pathname: "/u/**"
+                pathname: "/attachments/**"
             },
         ],
     },

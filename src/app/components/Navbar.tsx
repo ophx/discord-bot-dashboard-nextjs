@@ -29,11 +29,7 @@ export default async function Navbar() {
                         <span className="text-white">{process.env.CLIENT_NAME}</span>
                     </Link>
                 </div>
-                <div className="flex gap-8">
-                    <Link href="/#features" className="transition-all duration-150 font-medium text-gray-400 hover:text-white">
-                        Features
-                    </Link>
-                </div>
+                <div className="flex gap-8"></div>
                 <div>
                     {
                         user

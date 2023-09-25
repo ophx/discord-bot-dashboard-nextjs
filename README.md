@@ -1,5 +1,6 @@
 # discord-bot-dashboard-nextjs
 #### discord bot dashboard i made in nextjs cus I was bored. feel free to use it for your own discord bot!
+#### made with nextjs v13, framer motion, and the discord api :D
 
 ## .env example:
 ```

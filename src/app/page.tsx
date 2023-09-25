@@ -19,8 +19,8 @@ export default async function Home() {
                 <p className="text-white text-5xl">{process.env.CLIENT_NAME}</p>
                 <p className="text-gray-400 text-xl">{process.env.CLIENT_DESC}</p>
                 <div className="flex gap-4 mt-2">
-                  <Link href="/api/login" className="transition-all duration-150 px-4 py-2 rounded shadow-lg bg-blue-600 hover:bg-blue-700 text-white">
-                    Get Started!
+                  <Link href="#features" className="transition-all duration-150 px-4 py-2 rounded shadow-lg bg-blue-600 hover:bg-blue-700 text-white">
+                    See Features
                   </Link>
                   <Link href="/api/invite" target="_blank" className="transition-all duration-150 px-4 py-2 rounded shadow-lg bg-[#2f2f2f] hover:bg-[#3f3f3f] text-white">
                     Invite {process.env.CLIENT_NAME}
@@ -48,8 +48,24 @@ export default async function Home() {
 
       <div className="space-y-60 mb-96">
         {/* Features */}
-        <main id="features" className="text-center container mx-auto px-64">
-          <p className="text-white text-2xl mb-2">Features</p>
+        <main id="features" className="container mx-auto px-64">
+          <div className="space-y-4">
+            <div className="flex justify-between">
+              <div>
+                <Image
+                  src="https://cdn.discordapp.com/attachments/1125371978228965447/1155944651283496961/image.png"
+                  height={500}
+                  width={550}
+                  alt="DashboardPreview"
+                  className="rounded shadow-lg"
+                />
+              </div>
+              <div className="w-96">
+                <p className="text-white text-4xl">Commands</p>
+                <p className="text-gray-400">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi autem dolorem voluptas numquam, minima explicabo eaque quisquam eveniet, ut ipsum esse aspernatur quas, omnis cum! Illo quisquam placeat veniam ad.</p>
+              </div>
+            </div>
+          </div>
         </main>
       </div>
 
