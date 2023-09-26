@@ -159,7 +159,7 @@ export default async function Home() {
 
         {/* Ready */}
         <ScrollAnimation>
-          <div className="p-4">
+          <div className="p-4 mb-8">
             <div className="container mx-auto px-64">
               <p className="text-white text-2xl text-center">{process.env.CLIENT_DESC}</p>
               <p className="flex justify-center mt-2">
