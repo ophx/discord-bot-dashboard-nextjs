@@ -59,8 +59,8 @@ export default async function Home() {
             <p className="text-white text-2xl text-center">{process.env.CLIENT_NAME} Is Trusted And Used By More Than {botGuilds.length} Servers</p>
           </div>
           <div className="container mx-auto px-64">
-            <Marquee>
-              <div className="flex gap-4 mt-4">
+            <Marquee className="fixed top-14">
+              <div className="flex gap-4">
                 {botGuilds.map((guild: any) => (
                   <div key={guild.id} className="bg-[#2f2f2f] rounded shadow-lg p-4">
                     <div className="flex items-center">
