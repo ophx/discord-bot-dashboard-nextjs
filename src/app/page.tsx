@@ -60,18 +60,30 @@ export default async function Home() {
           </div>
           <div className="container mx-auto px-64">
             <Marquee>
-              <div className="grid grid-cols-4 gap-4 mt-4">
-                {botGuilds.slice(0, 4).map((guild: any) => (
+              <div className="flex gap-4 mt-4">
+                {botGuilds.map((guild: any) => (
                   <div key={guild.id} className="bg-[#2f2f2f] rounded shadow-lg p-4">
                     <div className="flex items-center">
                       <div>
-                        <Image
-                          src={`https://cdn.discordapp.com/icons/${guild.id}/${guild.icon}.png?size=300`}
-                          height={50}
-                          width={50}
-                          alt={guild.name}
-                          className="rounded-full shadow-lg mx-auto mr-4"
-                        />
+                        {
+                          guild.icon
+                          ?
+                          (
+                            <Image
+                              src={`https://cdn.discordapp.com/icons/${guild.id}/${guild.icon}.png?size=300`}
+                              height={50}
+                              width={50}
+                              alt={guild.name}
+                              className="rounded-full shadow-lg mx-auto mr-4"
+                            />
+                          )
+                          :
+                          (
+                            <div className="bg-[#3f3f3f] flex justify-center items-center rounded-full shadow-lg mx-auto mr-4 h-[50px] w-[50px]">
+                              <span className="text-white text-sm">{guild.name.match(/\b(\w)/g).join("")}</span>
+                            </div>
+                          )
+                        }
                       </div>
                       <div>
                         <p className="text-white truncate">{guild.name}</p>
