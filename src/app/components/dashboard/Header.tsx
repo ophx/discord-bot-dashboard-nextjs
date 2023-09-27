@@ -1,17 +1,10 @@
-"use client";
-
 import Image from "next/image";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 
 export default function Header({ user }: { user: any }) {
-    const pathname = usePathname();
-
     return (
         <div className="flex items-center justify-between w-full">
-            <div>
-                <p className="text-gray-400">{pathname}</p>
-            </div>
+            <div></div>
             <div className="flex items-center gap-4">
                 <Link href="/dashboard" className="transition-all duration-200 hover:bg-[#2f2f2f] hover:shadow-lg hover:rounded px-4 py-2 flex w-full">
                     <div className="flex items-center">
