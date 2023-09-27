@@ -14,5 +14,6 @@ REDIRECT_URI="http(s)://domain.com/api/callback" - MAKE SURE TO SET THIS IN YOUR
 ```
 
 ## Screenshots:
-
-## Features:
+![fdf](https://cdn.upload.systems/uploads/IoiDbbr6.gif)
+![fdf](https://cdn.upload.systems/uploads/o1byRNnD.png)
+![fdf](https://cdn.upload.systems/uploads/19qSis2X.png)
