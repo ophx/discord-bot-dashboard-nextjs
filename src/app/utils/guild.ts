@@ -30,3 +30,14 @@ export async function fetchGuildInfo(id: string) {
         return await response.json();
     }
 }
+
+export async function fetchGuildChannels(id: string) {
+    const headers = {
+        "Authorization": `Bot ${process.env.CLIENT_TOKEN}`,
+    }
+
+    const response = await fetch(`https://discord.com/api/guilds/${id}/channels`, { headers, method: "GET" });
+    if (response.ok) {
+        return await response.json();
+    }
+}
