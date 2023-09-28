@@ -19,7 +19,7 @@ export default async function Home({ params }: { params: { id: string }}) {
 
     const user = await getUser(token);
 
-    const placeholder = [...Array(20)];
+    const placeholder = [...Array(8)];
 
     return (
         <>
