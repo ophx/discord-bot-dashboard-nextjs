@@ -1,10 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
 
-export default function Header({ user }: { user: any }) {
+export default function Header({ user, page }: { user: any, page: string }) {
     return (
         <div className="flex items-center justify-between w-full">
-            <div></div>
+            <div>
+                <p className="text-white text-xl">{page}</p>
+            </div>
             <div className="flex items-center gap-4">
                 <Link href="/dashboard" className="transition-all duration-200 hover:bg-[#2f2f2f] hover:shadow-lg hover:rounded px-4 py-2 flex w-full">
                     <div className="flex items-center">

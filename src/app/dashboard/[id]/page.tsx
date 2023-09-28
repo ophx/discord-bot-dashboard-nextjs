@@ -7,7 +7,7 @@ import Sidebar from "../../components/dashboard/Sidebar";
 import { PieGraph } from "../../components/dashboard/Graphs";
 import Header from "../../components/dashboard/Header";
 
-export default async function Home({ params }: { params: { id: string } }) {
+export default async function Home({ params }: { params: { id: string }}) {
     const cookieStore = cookies();
     const token = String(cookieStore.get("token")?.value);
 
@@ -34,60 +34,12 @@ export default async function Home({ params }: { params: { id: string } }) {
                 <main className="ml-64 block w-full space-y-2">
                     {/* Header */}
                     <div className="bg-[#1f1f1f] px-4 py-2 shadow-lg">
-                        <Header user={user} />
+                        <Header user={user} page="Stats" />
                     </div>
 
                     {/* Main */}
                     <div className="p-4">
                         <div className="grid grid-cols-2 gap-4">
-                            <div className="bg-[#1f1f1f] rounded shadow-lg p-4">
-                                <p className="text-white text-xl">Basic Server Info</p>
-                                <div className="grid grid-cols-3 gap-4">
-                                    <div>
-                                        <p className="text-gray-400">
-                                            Vanity URL
-                                            <br />
-                                            <span className="text-white">{guild.vanity_url_code ? `discord.gg/${guild.vanity_url_code}` : "No Custom Code"}</span>
-                                        </p>
-                                    </div>
-                                    <div>
-                                        <p className="text-gray-400">
-                                            Roles
-                                            <br />
-                                            <span className="text-white">{guild.roles.length}</span>
-                                        </p>
-                                    </div>
-                                    <div>
-                                        <p className="text-gray-400">
-                                            Emojis
-                                            <br />
-                                            <span className="text-white">{guild.emojis.length}</span>
-                                        </p>
-                                    </div>
-                                    <div>
-                                        <p className="text-gray-400">
-                                            Stickers
-                                            <br />
-                                            <span className="text-white">{guild.stickers.length}</span>
-                                        </p>
-                                    </div>
-                                    <div>
-                                        <p className="text-gray-400">
-                                            Boost Level
-                                            <br />
-                                            <span className="text-white">{guild.premium_tier}</span>
-                                        </p>
-                                    </div>
-                                    <div>
-                                        <p className="text-gray-400">
-                                            Boosts
-                                            <br />
-                                            <span className="text-white">{guild.premium_subscription_count}</span>
-                                        </p>
-                                    </div>
-                                </div>
-
-                            </div>
                             <div className="bg-[#1f1f1f] rounded shadow-lg p-4">
                                 <p className="text-white text-xl">Members</p>
                                 <div className="h-[300px] w-[300px] flex justify-center mx-auto">
