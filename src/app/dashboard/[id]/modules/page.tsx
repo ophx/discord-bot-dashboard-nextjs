@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { redirect } from "next/navigation";
 import { cookies } from "next/headers";
 import { fetchGuildInfo } from "../../../utils/guild";
@@ -18,6 +19,8 @@ export default async function Home({ params }: { params: { id: string }}) {
 
     const user = await getUser(token);
 
+    const placeholder = [...Array(20)];
+
     return (
         <>
             <div className="flex">
@@ -32,7 +35,17 @@ export default async function Home({ params }: { params: { id: string }}) {
 
                     {/* Main */}
                     <div className="p-4">
-                        <p className="text-white">fsdfsdfsdfsdf</p>
+                        <div className="grid grid-cols-4 gap-4">
+                            {placeholder.map((a: any, i: any) => (
+                                <div key={i} className="bg-[#1f1f1f] rounded shadow-lg p-4">
+                                    <p className="text-white text-xl">Lorem</p>
+                                    <p className="text-gray-400">Lorem ipsum dolor sit</p>
+                                    <Link href="" className="flex mt-1 transition-all duration-150 px-4 py-2 rounded shadow-lg bg-blue-600 hover:bg-blue-700 text-white">
+                                        Lorem
+                                    </Link>
+                                </div>
+                            ))}
+                        </div>
                     </div>
                 </main>
             </div>
