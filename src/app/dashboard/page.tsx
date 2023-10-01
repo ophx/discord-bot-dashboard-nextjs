@@ -28,7 +28,8 @@ export default async function Home() {
                 <div className="flex h-screen">
                     <div className="m-auto w-full">
                         <div>
-                            <p className="text-white text-5xl text-center mb-4">Select A Server</p>
+                            <p className="text-white text-5xl text-center">Select A Server</p>
+                            <p className="text-gray-400 text-2xl text-center mb-4">{mutualGuilds.length} Server(s)</p>
                             <div className="bg-[#1f1f1f] rounded shadow-lg p-4">
                                 <div className="grid grid-cols-4 gap-4">
                                     {mutualGuilds.map((guild: any) => (
